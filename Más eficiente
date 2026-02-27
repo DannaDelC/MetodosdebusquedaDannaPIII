@@ -1,0 +1,5 @@
+Indique cual de los 2 métodos es mas eficiente y por qué
+Diria que el Binario, ya que por la forma en la que se ejecuta es más rapido, mientras el lineal revisa numero por numero
+el binario divide en mitades y va descartando en varias cantidades no revisa dato a dato. mientras que la lineal hace
+la cantidad de números de comparaciones ( en este codigo 20 comparaciones), el binario hace por mitades, 
+entonces hace 4 de 5 datos en comparaciones, eso lo hace más rapido y eficiente. 
