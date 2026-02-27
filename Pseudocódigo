@@ -1,0 +1,37 @@
+Algoritmo BusquedaLineal
+    Definir arreglo[20]
+    Definir valor, i Como Entero
+
+    Para i ← 0 Hasta 19 Hacer
+        Si arreglo[i] = valor Entonces
+            Retornar i
+        FinSi
+    FinPara
+
+    Retornar -1
+FinAlgoritmo
+
+
+Algoritmo BusquedaBinaria
+    Definir arreglo[20]
+    Definir valor, izquierda, derecha, medio Como Entero
+
+    izquierda ← 0
+    derecha ← 19
+
+    Mientras izquierda ≤ derecha Hacer
+        medio ← (izquierda + derecha) / 2
+
+        Si arreglo[medio] = valor Entonces
+            Retornar medio
+        Sino
+            Si arreglo[medio] < valor Entonces
+                izquierda ← medio + 1
+            Sino
+                derecha ← medio - 1
+            FinSi
+        FinSi
+    FinMientras
+
+    Retornar -1
+FinAlgoritmo
