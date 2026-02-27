@@ -1,37 +1,58 @@
 Algoritmo BusquedaLineal
-    Definir arreglo[20]
-    Definir valor, i Como Entero
+	
+	Definir arreglo, valor, i Como Entero
+	Dimension arreglo[20]
+	
+	Para i <- 0 Hasta 19 Hacer
+		arreglo[i] <- i + 1
+	FinPara
+	
+	Escribir "Ingrese numero del 1 al 20:"
+	Leer valor
+	
+	Para i <- 0 Hasta 19 Hacer
+		Si arreglo[i] = valor Entonces
+			Escribir "Encontrado en indice: ", i
+		FinSi
+	FinPara
+	
+	Escribir "No encontrado"
 
-    Para i ← 0 Hasta 19 Hacer
-        Si arreglo[i] = valor Entonces
-            Retornar i
-        FinSi
-    FinPara
-
-    Retornar -1
 FinAlgoritmo
 
 
 Algoritmo BusquedaBinaria
-    Definir arreglo[20]
-    Definir valor, izquierda, derecha, medio Como Entero
+	
+	Definir arreglo, valor, izquierda, derecha, medio Como Entero
+	Dimension arreglo[20]
+	
+	Para izquierda <- 0 Hasta 19 Hacer
+		arreglo[izquierda] <- izquierda + 1
+	FinPara
+	
+	Escribir "Ingrese numero del 1 al 20:"
+	Leer valor
+	
+	izquierda <- 0
+	derecha <- 19
+	
+	Mientras izquierda <= derecha Hacer
+		
+		medio <- (izquierda + derecha) / 2
+		
+		Si arreglo[medio] = valor Entonces
+			Escribir "Encontrado en indice: ", medio
+			FinAlgoritmo
+		SiNo
+			Si valor > arreglo[medio] Entonces
+				izquierda <- medio + 1
+			SiNo
+				derecha <- medio - 1
+			FinSi
+		FinSi
+		
+	FinMientras
+	
+	Escribir "No encontrado"
 
-    izquierda ← 0
-    derecha ← 19
-
-    Mientras izquierda ≤ derecha Hacer
-        medio ← (izquierda + derecha) / 2
-
-        Si arreglo[medio] = valor Entonces
-            Retornar medio
-        Sino
-            Si arreglo[medio] < valor Entonces
-                izquierda ← medio + 1
-            Sino
-                derecha ← medio - 1
-            FinSi
-        FinSi
-    FinMientras
-
-    Retornar -1
 FinAlgoritmo
